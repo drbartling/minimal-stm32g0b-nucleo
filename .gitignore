@@ -1,0 +1,25 @@
+# Build folders
+**/build
+**/target
+**/debug
+
+# build artifacts
+*.map
+
+# Temporary files
+bar.*
+foo.*
+temp.*
+tmp.*
+*.pyc
+
+*.launch*
+
+.DS_Store*
+.tags*
+.project*
+
+# IDE specific
+.obsidian
+.settings/
+.cproject
