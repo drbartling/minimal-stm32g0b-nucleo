@@ -17,9 +17,9 @@ main(void)
 
     while (1) {
 
-        STM_gpio_f->odr.pin_0 = 1;
+        STM_gpio_a->odr.pin_5 = 1;
         delay(200000);
-        STM_gpio_f->odr.pin_0 = 0;
+        STM_gpio_a->odr.pin_5 = 0;
         delay(200000);
     }
     return 0;
@@ -29,11 +29,7 @@ void
 init_gpio(void)
 {
     STM_RCC->IOPENR.gpioa_en = 1;
-    STM_gpio_a->moder.pin_15 = stm_gpio_mode_output;
-    STM_gpio_a->odr.pin_15   = 1;
-
-    STM_RCC->IOPENR.gpiof_en = 1;
-    STM_gpio_f->moder.pin_0  = stm_gpio_mode_output;
+    STM_gpio_a->moder.pin_5  = stm_gpio_mode_output;
 }
 
 static void
