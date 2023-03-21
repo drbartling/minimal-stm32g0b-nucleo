@@ -72,13 +72,35 @@ typedef union {
     uint32_t bits;
 } stm_gpio_mode_reg_t;
 
+typedef union {
+    struct {
+        uint32_t pin_0 : 1;
+        uint32_t pin_1 : 1;
+        uint32_t pin_2 : 1;
+        uint32_t pin_3 : 1;
+        uint32_t pin_4 : 1;
+        uint32_t pin_5 : 1;
+        uint32_t pin_6 : 1;
+        uint32_t pin_7 : 1;
+        uint32_t pin_8 : 1;
+        uint32_t pin_9 : 1;
+        uint32_t pin_10 : 1;
+        uint32_t pin_11 : 1;
+        uint32_t pin_12 : 1;
+        uint32_t pin_13 : 1;
+        uint32_t pin_14 : 1;
+        uint32_t pin_15 : 1;
+    };
+    uint32_t bits;
+} stm_gpio_odr_reg_t;
+
 typedef struct {
     volatile stm_gpio_mode_reg_t moder;
     volatile uint32_t            otyper;
     volatile uint32_t            ospeedr;
     volatile uint32_t            pupdr;
     volatile uint32_t            idr;
-    volatile uint32_t            odr;
+    volatile stm_gpio_odr_reg_t  odr;
     volatile uint32_t            bsrr;
     volatile uint32_t            lckr;
     volatile uint32_t            afr;

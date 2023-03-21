@@ -17,9 +17,9 @@ main(void)
 
     while (1) {
 
-        STM_gpio_a->odr = 0x20;
+        STM_gpio_a->odr.pin_5 = 1;
         delay(200000);
-        STM_gpio_a->odr = 0x0;
+        STM_gpio_a->odr.pin_5 = 0;
         delay(200000);
     }
     return 0;
